@@ -1,0 +1,14 @@
+INFO:__main__:Cargando archivo Terrazas_Normalizadas.csv con codificación 'utf-8'...
+INFO:__main__:Archivo Terrazas_Normalizadas.csv cargado exitosamente con 6275 filas y 54 columnas.
+INFO:__main__:Cargando archivo Licencias_SinDuplicados.csv con codificación 'utf-8'...
+INFO:__main__:Archivo Licencias_SinDuplicados.csv cargado exitosamente con 131906 filas y 39 columnas.
+INFO:__main__:INNER JOIN realizado exitosamente.
+INFO:__main__:Eliminados 8075 duplicados de 'id_local'.
+INFO:__main__:Dataset integrado guardado en 'C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\data\cleaned_data\Licencias_Terrazas_Integradas.csv'
+INFO:__main__:Cargando archivo Terrazas_Normalizadas.csv con codificación 'utf-8'...
+INFO:__main__:Archivo Terrazas_Normalizadas.csv cargado exitosamente con 6275 filas y 54 columnas.
+INFO:__main__:Cargando archivo Licencias_SinDuplicados.csv con codificación 'utf-8'...
+INFO:__main__:Archivo Licencias_SinDuplicados.csv cargado exitosamente con 131906 filas y 39 columnas.
+INFO:__main__:INNER JOIN realizado exitosamente.
+INFO:__main__:Eliminados 8075 duplicados de 'id_local'.
+INFO:__main__:Dataset integrado guardado en 'C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\data\cleaned_data\Licencias_Terrazas_Integradas.csv'

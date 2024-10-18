@@ -1,0 +1,12 @@
+pyspark
+pandas
+numpy
+matplotlib
+scikit-learn
+jupyter
+statsmodels
+kafka-python
+pytest
+pyodbc
+sqlalchemy
+

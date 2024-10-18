@@ -1,0 +1,40 @@
+//insercion de los datos al Data WareHouse
+
+//Tabla Dim_fecha
+INSERT INTO [limpieza_datos].[dbo].[Dim_Fecha] (Fecha, Año, Mes, Trimestre, Día)
+SELECT DISTINCT 
+    Fecha_confir_ult_decreto_resol, 
+    YEAR(Fecha_confir_ult_decreto_resol) AS Año, 
+    MONTH(Fecha_confir_ult_decreto_resol) AS Mes, 
+    DATEPART(QUARTER, Fecha_confir_ult_decreto_resol) AS Trimestre, 
+    DAY(Fecha_confir_ult_decreto_resol) AS Día
+FROM Licencias_Terrazas_Integradas
+WHERE ISDATE(Fecha_confir_ult_decreto_resol) = 1;  -- Solo fechas válidas
+
+
+//Tabla Dim_ubicacion
+INSERT INTO [limpieza_datos].[dbo].[Dim_Ubicación] (Nombre_Ubicacion, Ciudad, Estado)
+SELECT DISTINCT 
+    Ubicacion,  -- Cambiar al nombre correcto de la columna
+    Ciudad,
+    Estado
+FROM Licencias_Terrazas_Integradas
+WHERE Ubicacion IS NOT NULL;  -- Asegúrate de que no sean nulos
+
+
+//Tabla Dim_tipo_licencia
+INSERT INTO [limpieza_datos].[dbo].[Dim_Tipo_Licencia] (Tipo_Licencia)
+SELECT DISTINCT Tipo_Licencia  -- Cambiar al nombre correcto de la columna
+FROM Licencias_Terrazas_Integradas
+WHERE Tipo_Licencia IS NOT NULL;  -- Asegúrate de que no sean nulos
+
+
+//Tabla Hecho_licencias
+INSERT INTO [limpieza_datos].[dbo].[Hechos_Licencias] (Superficie_TO, Fecha_ID, Ubicacion_ID, Tipo_Licencia_ID)
+SELECT 
+    Superficie_TO,  -- Cambiar al nombre correcto de la columna
+    (SELECT Fecha_ID FROM [limpieza_datos].[dbo].[Dim_Fecha] WHERE Dim_Fecha.Fecha = Licencias_Terrazas_Integradas.Fecha_confir_ult_decreto_resol) AS Fecha_ID,
+    (SELECT Ubicacion_ID FROM [limpieza_datos].[dbo].[Dim_Ubicación] WHERE Dim_Ubicación.Nombre_Ubicacion = Licencias_Terrazas_Integradas.Ubicacion) AS Ubicacion_ID,
+    (SELECT Tipo_Licencia_ID FROM [limpieza_datos].[dbo].[Dim_Tipo_Licencia] WHERE Dim_Tipo_Licencia.Tipo_Licencia = Licencias_Terrazas_Integradas.Tipo_Licencia) AS Tipo_Licencia_ID
+FROM Licencias_Terrazas_Integradas
+WHERE Superficie_TO IS NOT NULL;  -- Asegúrate de que no sean nulos

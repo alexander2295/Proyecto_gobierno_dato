@@ -1,0 +1,73 @@
+INFO:__main__:Iniciando el proceso de extracción de datos...
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/10/17 15:30:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO:__main__:Cargando archivo books desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/books.csv (CSV)...
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:books cargado exitosamente con 418 filas y 11 columnas.
+INFO:__main__:Cargando archivo licencias desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Licencias_Locales_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:licencias cargado exitosamente con 148218 filas y 33 columnas.
+INFO:__main__:Cargando archivo locales desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Locales_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:locales cargado exitosamente con 132173 filas y 42 columnas.
+INFO:__main__:Cargando archivo terrazas desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Terrazas_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:terrazas cargado exitosamente con 6275 filas y 57 columnas.
+INFO:__main__:Extracción de datos completada. Se han cargado 4 archivos.
+INFO:py4j.clientserver:Closing down clientserver connection
+CORRECTO: el proceso con PID 16076 (proceso secundario de PID 4120)
+ha sido terminado.
+CORRECTO: el proceso con PID 4120 (proceso secundario de PID 1148)
+ha sido terminado.
+CORRECTO: el proceso con PID 1148 (proceso secundario de PID 10040)
+ha sido terminado.
+INFO:__main__:Iniciando el proceso de extracción de datos...
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/10/17 15:34:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO:__main__:Cargando archivo books desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/books.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:books cargado exitosamente con 418 filas y 11 columnas.
+INFO:__main__:Cargando archivo licencias desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Licencias_Locales_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:licencias cargado exitosamente con 148218 filas y 33 columnas.
+INFO:__main__:Cargando archivo locales desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Locales_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:locales cargado exitosamente con 132173 filas y 42 columnas.
+INFO:__main__:Cargando archivo terrazas desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Terrazas_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:terrazas cargado exitosamente con 6275 filas y 57 columnas.
+INFO:__main__:Extracción de datos completada. Se han cargado 4 archivos.
+INFO:py4j.clientserver:Closing down clientserver connection
+CORRECTO: el proceso con PID 13588 (proceso secundario de PID 12812)
+ha sido terminado.
+CORRECTO: el proceso con PID 12812 (proceso secundario de PID 18444)
+ha sido terminado.
+CORRECTO: el proceso con PID 18444 (proceso secundario de PID 13412)
+ha sido terminado.
+INFO:__main__:Iniciando el proceso de extracción de datos...
+^C^CINFO:__main__:Iniciando el proceso de extracción de datos...
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/10/18 00:06:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO:__main__:Cargando archivo books desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/books.csv (CSV)...
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:books cargado exitosamente con 418 filas y 11 columnas.
+INFO:__main__:Cargando archivo licencias desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Licencias_Locales_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:licencias cargado exitosamente con 148218 filas y 33 columnas.
+INFO:__main__:Cargando archivo locales desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Locales_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:locales cargado exitosamente con 132173 filas y 42 columnas.
+INFO:__main__:Cargando archivo terrazas desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Terrazas_202104.csv (CSV)...
+INFO:__main__:El archivo se cargó correctamente con la codificación 'utf-8'.
+INFO:__main__:terrazas cargado exitosamente con 6275 filas y 57 columnas.
+INFO:__main__:Extracción de datos completada. Se han cargado 4 archivos.
+INFO:py4j.clientserver:Closing down clientserver connection
+CORRECTO: el proceso con PID 15368 (proceso secundario de PID 16256)
+ha sido terminado.
+CORRECTO: el proceso con PID 16256 (proceso secundario de PID 17136)
+ha sido terminado.
+CORRECTO: el proceso con PID 17136 (proceso secundario de PID 4464)
+ha sido terminado.

@@ -1,0 +1,30 @@
+CREATE TABLE Licencias (
+    Licencia_ID INT PRIMARY KEY IDENTITY(1,1),
+    Superficie_TO FLOAT NOT NULL,
+    Fecha_ID INT,
+    Ubicacion_ID INT,
+    Tipo_Licencia_ID INT,
+    FOREIGN KEY (Fecha_ID) REFERENCES Fechas(Fecha_ID),
+    FOREIGN KEY (Ubicacion_ID) REFERENCES Ubicaciones(Ubicacion_ID),
+    FOREIGN KEY (Tipo_Licencia_ID) REFERENCES Tipos_Licencia(Tipo_Licencia_ID)
+);
+
+CREATE TABLE Fechas (
+    Fecha_ID INT PRIMARY KEY IDENTITY(1,1),
+    Fecha DATE NOT NULL,
+    Año INT NOT NULL,
+    Mes INT NOT NULL,
+    Trimestre INT NOT NULL,
+    Día INT NOT NULL
+);
+CREATE TABLE Ubicaciones (
+    Ubicacion_ID INT PRIMARY KEY IDENTITY(1,1),
+    Nombre_Ubicacion VARCHAR(255) NOT NULL,
+    Ciudad VARCHAR(100),
+    Estado VARCHAR(100)
+);
+
+CREATE TABLE Tipos_Licencia (
+    Tipo_Licencia_ID INT PRIMARY KEY IDENTITY(1,1),
+    Descripcion VARCHAR(100) NOT NULL
+);

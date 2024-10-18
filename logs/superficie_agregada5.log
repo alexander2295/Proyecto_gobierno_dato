@@ -1,0 +1,10 @@
+INFO:__main__:Cargando archivo Terrazas_202104.csv con codificación 'utf-8'...
+INFO:__main__:Archivo Terrazas_202104.csv cargado exitosamente con 6275 filas y 57 columnas.
+INFO:__main__:Área con mayor superficie: SOL                  - Superficie Total: 5817.65
+INFO:__main__:Área con menor superficie: AEROPUERTO           - Superficie Total: 41.28
+INFO:__main__:Datos de superficies agregadas guardados en 'data/cleaned_data\Superficies_Agregadas.csv'
+INFO:__main__:Cargando archivo Terrazas_202104.csv con codificación 'utf-8'...
+INFO:__main__:Archivo Terrazas_202104.csv cargado exitosamente con 6275 filas y 57 columnas.
+INFO:__main__:Área con mayor superficie: SOL                  - Superficie Total: 5817.65
+INFO:__main__:Área con menor superficie: AEROPUERTO           - Superficie Total: 41.28
+INFO:__main__:Datos de superficies agregadas guardados en 'data/cleaned_data\Superficies_Agregadas.csv'

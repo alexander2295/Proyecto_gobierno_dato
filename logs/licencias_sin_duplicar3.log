@@ -1,0 +1,26 @@
+INFO:__main__:Cargando archivo desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Locales_202104.csv...
+INFO:__main__:Archivo cargado exitosamente con 132171 filas y 42 columnas.
+INFO:__main__:Registros eliminados por más del 50% de nulos: 0
+INFO:__main__:Registros restantes: 132171
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\licencias_sin_duplicar3.py:88: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df['Fecha_Dec_Lic'].fillna(pd.Timestamp('1900-01-01'), inplace=True)  # Reemplazar nulos por fecha por defecto
+INFO:__main__:Registros eliminados por duplicados: 265
+INFO:__main__:Dataset limpio guardado como C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\data\cleaned_data\Licencias_SinDuplicados.csv
+INFO:__main__:Cargando archivo desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/Locales_202104.csv...
+INFO:__main__:Archivo cargado exitosamente con 132171 filas y 42 columnas.
+INFO:__main__:Registros eliminados por más del 50% de nulos: 0
+INFO:__main__:Registros restantes: 132171
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\licencias_sin_duplicar3.py:88: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df['Fecha_Dec_Lic'].fillna(pd.Timestamp('1900-01-01'), inplace=True)  # Reemplazar nulos por fecha por defecto
+INFO:__main__:Registros eliminados por duplicados: 265
+INFO:__main__:Dataset limpio guardado como C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\data\cleaned_data\Licencias_SinDuplicados.csv

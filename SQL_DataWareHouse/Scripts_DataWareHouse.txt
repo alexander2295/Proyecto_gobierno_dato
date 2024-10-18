@@ -1,0 +1,33 @@
+// Creacion del Data WareHouse
+CREATE TABLE [limpieza_datos].[dbo].[Hechos_Licencias] (
+    ID_Licencia INT PRIMARY KEY IDENTITY(1,1),
+    Superficie_ES FLOAT NOT NULL,
+    Fecha_ID INT NOT NULL,
+    Ubicacion_ID INT NOT NULL,
+    Tipo_Licencia_ID INT NOT NULL,
+    FOREIGN KEY (Fecha_ID) REFERENCES [limpieza_datos].[dbo].[Dim_Fecha](Fecha_ID),
+    FOREIGN KEY (Ubicacion_ID) REFERENCES [limpieza_datos].[dbo].[Dim_Ubicación](Ubicacion_ID),
+    FOREIGN KEY (Tipo_Licencia_ID) REFERENCES [limpieza_datos].[dbo].[Dim_Tipo_Licencia](Tipo_Licencia_ID)
+);
+
+CREATE TABLE [limpieza_datos].[dbo].[Dim_Ubicación] (
+    Ubicacion_ID INT PRIMARY KEY IDENTITY(1,1),
+    Nombre_Ubicacion VARCHAR(255) NOT NULL,
+    Ciudad VARCHAR(100),
+    Estado VARCHAR(100)
+);
+
+
+CREATE TABLE [limpieza_datos].[dbo].[Dim_Tipo_Licencia] (
+    Tipo_Licencia_ID INT PRIMARY KEY IDENTITY(1,1),
+    Tipo_Licencia VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE [limpieza_datos].[dbo].[Dim_Fecha] (
+    Fecha_ID INT PRIMARY KEY IDENTITY(1,1),
+    Fecha DATE NOT NULL,
+    Año INT NOT NULL,
+    Mes INT NOT NULL,
+    Trimestre INT NOT NULL,
+    Día INT NOT NULL
+);

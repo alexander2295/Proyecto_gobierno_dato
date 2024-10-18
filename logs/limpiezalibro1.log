@@ -1,0 +1,175 @@
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py", line 6, in <module>
+    import pymysql  # Asegúrate de tener esta biblioteca instalada
+    ^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'pymysql'
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/10/17 15:35:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO:__main__:Cargando archivo books desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/books.csv...
+INFO:__main__:Archivo books cargado exitosamente con 418 filas y 11 columnas.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:42: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_filtered.fillna(0, inplace=True)
+INFO:__main__:Registros eliminados: 15
+INFO:__main__:Registros restantes: 403
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:130: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  libros_df_filtrado.drop(columns=['_id'], inplace=True, errors='ignore')  # Ignorar si no existe
+INFO:__main__:Columna 'pageCount' convertida a flotante.
+WARNING:__main__:La columna 'titulo' no existe en el DataFrame.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:73: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.lower().str.strip()
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:76: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.replace(r'\bPUBLISH\b', '', regex=True)
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:77: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.replace(r'\bMEAP\b', '', regex=True)
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:80: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.replace(r'\s+', ' ', regex=True).str.strip()
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:83: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].replace('', 'desconocido').replace(0, 'desconocido')
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:84: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna('desconocido', inplace=True)
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:84: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col].fillna('desconocido', inplace=True)
+INFO:__main__:Columna 'authors' limpiada y normalizada.
+INFO:__main__:Columna 'categories' limpiada y normalizada.
+INFO:__main__:Columna 'publishedDate' limpiada y normalizada.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:92: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['status'] = df['status'].apply(lambda x: x if x in ['MEAP', 'PUBLISH'] else 'desconocido')
+INFO:__main__:Columna 'status' validada y valores desconocidos reemplazados.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:110: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['publishedDate'] = df['publishedDate'].apply(validar_fecha)
+INFO:__main__:Columna 'publishedDate' validada y valores desconocidos reemplazados.
+INFO:py4j.clientserver:Closing down clientserver connection
+CORRECTO: el proceso con PID 14632 (proceso secundario de PID 7912)
+ha sido terminado.
+CORRECTO: el proceso con PID 7912 (proceso secundario de PID 3248)
+ha sido terminado.
+CORRECTO: el proceso con PID 3248 (proceso secundario de PID 15936)
+ha sido terminado.
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+24/10/18 00:06:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+INFO:__main__:Cargando archivo books desde C:/Users/Usuario/Desktop/Gobierno_Limpieza_data/data/books.csv...
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                INFO:__main__:Archivo books cargado exitosamente con 418 filas y 11 columnas.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:42: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_filtered.fillna(0, inplace=True)
+INFO:__main__:Registros eliminados: 15
+INFO:__main__:Registros restantes: 403
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:130: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  libros_df_filtrado.drop(columns=['_id'], inplace=True, errors='ignore')  # Ignorar si no existe
+INFO:__main__:Columna 'pageCount' convertida a flotante.
+WARNING:__main__:La columna 'titulo' no existe en el DataFrame.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:73: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.lower().str.strip()
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:76: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.replace(r'\bPUBLISH\b', '', regex=True)
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:77: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.replace(r'\bMEAP\b', '', regex=True)
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:80: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].str.replace(r'\s+', ' ', regex=True).str.strip()
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:83: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col] = df[col].replace('', 'desconocido').replace(0, 'desconocido')
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:84: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df[col].fillna('desconocido', inplace=True)
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:84: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[col].fillna('desconocido', inplace=True)
+INFO:__main__:Columna 'authors' limpiada y normalizada.
+INFO:__main__:Columna 'categories' limpiada y normalizada.
+INFO:__main__:Columna 'publishedDate' limpiada y normalizada.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:92: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['status'] = df['status'].apply(lambda x: x if x in ['MEAP', 'PUBLISH'] else 'desconocido')
+INFO:__main__:Columna 'status' validada y valores desconocidos reemplazados.
+C:\Users\Usuario\Desktop\Gobierno_Limpieza_data\scripts\limpiezalibro1.py:110: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df['publishedDate'] = df['publishedDate'].apply(validar_fecha)
+INFO:__main__:Columna 'publishedDate' validada y valores desconocidos reemplazados.
+INFO:py4j.clientserver:Closing down clientserver connection
+CORRECTO: el proceso con PID 11536 (proceso secundario de PID 9288)
+ha sido terminado.
+CORRECTO: el proceso con PID 9288 (proceso secundario de PID 3488)
+ha sido terminado.
+CORRECTO: el proceso con PID 3488 (proceso secundario de PID 17372)
+ha sido terminado.
